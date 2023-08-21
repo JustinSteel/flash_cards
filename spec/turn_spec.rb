@@ -11,18 +11,19 @@ RSpec.describe Turn do
 
         expect(turn.guess).to eq("Juneau")
     end
-    it 'returns the Card'
+    it 'returns the Card' do
         turn = Turn.new("Juneau", "Juneau")
 
         expect(turn.card).to eq("Juneau")
     end
-    it 'returns a boolean indicating if the guess matched the answer on the Card'
+    it 'returns a boolean indicating if the guess matched the answer on the Card' do
         turn = Turn.new("Juneau", "Juneau")
 
         expect(turn.correct?). to be(true)
     end
-    it 'returns "Correct!" or "Incorrect." based on whether the guess was correct or not.'
+    it 'returns "Correct!" or "Incorrect." ' do
     turn = Turn.new("Juneau", "Juneau")
     
     expect(turn.feedback).to eq("Correct!")
+    end
 end
