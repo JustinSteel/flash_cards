@@ -8,13 +8,13 @@ class Turn
         @string
     end
     def correct?
-        @string == @string
+        @string == card.answer
     end
     def feedback
-        if @string == @string
+        if @string == card.answer
             "Correct!"
-        else 
-            "Incorrect"
+        else
+            "Incorrect!"
         end
     end
 end
